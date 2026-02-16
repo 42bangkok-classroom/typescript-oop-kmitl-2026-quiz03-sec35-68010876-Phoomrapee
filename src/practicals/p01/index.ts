@@ -1,9 +1,13 @@
-import { Student } from './student'
+export class Student {
+    firstname: string
+    lastname: string
 
-const student = new Student()
+    constructor(firstname: string, lastname: string) {
+        this.firstname = firstname
+        this.lastname = lastname
+    }
+}
 
-student.firstname = 'John'
-student.lastname = 'Doe'
+const student = new Student('John', 'Doe')
 
-student.printName()
-// John Doe
+console.log(student.firstname +'  '+ student.lastname)
